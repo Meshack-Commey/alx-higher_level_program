@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cursor = cont.cursor()
     cursor.execute(
             "SELECT * FROM states WHERE name LIKE"
-            " '{:s}' ORDER BY id ASC".format(argv[4]))
+            " '{:s}' ORDER BY states.id ASC".format(argv[4]))
     db = cursor.fetchall()
     for i in db:
         if i[1] == argv[4]:
